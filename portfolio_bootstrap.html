@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Étudiant</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        .project-separator {
+            border-bottom: 2px solid #007bff; 
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        .project-image {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 90%;
+            height: auto;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <div class="container d-flex justify-content-center">
+            <a class="navbar-brand text-white fs-4">
+                <span class="text-light">Portfolio</span> <span class="fw-bold text-warning">Corentin Delot</span> 
+            </a>
+        </div>
+    </nav>
+    
+
+    <main>
+        <section id="cv" class="container my-5">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card text-center">
+                        <img src="photo.jpg" class="card-img-top mx-auto rounded" alt="Photo de profil" 
+                             style="width: 150px; height: 250px; object-fit: cover; object-position: center 20%; margin-top: 20px; border-radius: 10px;">
+                        <div class="card-body">
+                            <h3 class="card-title">Corentin Delot</h3>
+                            <p class="card-text">Développeur web passionné par les technologies modernes.</p>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#motivationModal">Voir la lettre de motivation</button>
+                            <a href="CV.pdf" class="btn btn-success mt-3" download>Télécharger mon CV (PDF)</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <ul class="nav nav-tabs" id="cvTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link active" id="experiences-tab" data-bs-toggle="tab" href="#experiences" role="tab" aria-controls="experiences" aria-selected="true">Expériences</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="hard-skills-tab" data-bs-toggle="tab" href="#hard-skills" role="tab" aria-controls="hard-skills" aria-selected="false">Hard Skills</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="soft-skills-tab" data-bs-toggle="tab" href="#soft-skills" role="tab" aria-controls="soft-skills" aria-selected="false">Soft Skills</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="cvTabContent">
+                        <div class="tab-pane fade show active" id="experiences" role="tabpanel" aria-labelledby="experiences-tab">
+                            <ul class="list-group mt-3">
+                                <li class="list-group-item">Stagiaire Développeur Java chez CGI (4 semaines)</li>
+                                <li class="list-group-item">Stagiaire Développeur Java chez CGI (6 semaines)</li>
+                            </ul>
+                        </div>
+                        <div class="tab-pane fade" id="hard-skills" role="tabpanel" aria-labelledby="hard-skills-tab">
+                            <ul class="list-group mt-3">
+                                <li class="list-group-item" data-bs-toggle="tooltip" title="Développement web full-stack">HTML/CSS/JavaScript</li>
+                                <li class="list-group-item" data-bs-toggle="tooltip" title="Framework puissant pour le développement web">Bootstrap</li>
+                                <li class="list-group-item" data-bs-toggle="tooltip" title="Programmation côté serveur">PHP</li>
+                                <li class="list-group-item" data-bs-toggle="tooltip" title="Gestion de bases de données">MySQL</li>
+                                <li class="list-group-item" data-bs-toggle="tooltip" title="Développement d'applications desktop et web">C#</li>
+                                <li class="list-group-item" data-bs-toggle="tooltip" title="Développement d'applications Android et web">Java</li>
+                                <li class="list-group-item" data-bs-toggle="tooltip" title="Développement d'applications mobiles multiplateformes">Flutter/Dart</li>
+                            </ul>
+                        </div>
+                        <div class="tab-pane fade" id="soft-skills" role="tabpanel" aria-labelledby="soft-skills-tab">
+                            <ul class="list-group mt-3">
+                                <li class="list-group-item">Communication</li>
+                                <li class="list-group-item">Adaptabilité</li>
+                                <li class="list-group-item">Entraide</li>
+                                <li class="list-group-item">Esprit d’équipe</li>
+                                <li class="list-group-item">Autonomie</li>
+                                <li class="list-group-item">Ponctualité</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="projects" class="container my-5 py-5 bg-light border border-primary rounded-3 shadow-sm">
+            <h2 class="text-center text-primary mb-4">Projets</h2>
+            <div class="row">
+                <div class="col-12 mb-4">
+                    <div class="card shadow-sm">
+                        <div class="row g-0">
+                            <div class="col-md-6 p-3 d-flex justify-content-center">
+                                <img src="project1.jpg" class="img-fluid rounded-start" alt="Capture d'écran téléphone en portrait" style="max-width: 40%; height: auto; object-position: center;">
+                            </div>
+                            <div class="col-md-6 d-flex flex-column justify-content-center p-4">
+                                <h5 class="card-title text-primary">Jeu mobile Flutter</h5>
+                                <p class="card-text">Notre projet était ici de développer un jeu de type 2048 avec quelques variantes et options sur les calculs de la grille et de faciliter le jeu permettant à la fois des défis plus abordables pour les joueurs, mais aussi une simplification dans le développement et l’algorithmie de celui-ci.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 mb-4">
+                    <div class="card shadow-sm">
+                        <div class="row g-0">
+                            <div class="col-md-6 p-3">
+                                <img src="project2.PNG" class="img-fluid rounded-start" alt="Projet 2" style="object-fit: cover; max-height: 300px; width: 100%; object-position: center;">
+                            </div>
+                            <div class="col-md-6 d-flex flex-column justify-content-center p-4">
+                                <h5 class="card-title text-primary">Application web Vue.js</h5>
+                                <p class="card-text">L'objectif de cette application web était de se familiariser avec les concepts clés de Vue.js tout en créant une application web interactive sur le thème des superhéros. En apprenant à récupérer des données à partir d'une API externe, à les afficher dynamiquement, et à créer des fonctionnalités interactives.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div class="modal fade" id="motivationModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Lettre de Motivation</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Corentin Delot</strong><br>
+                    5 BIS rue Fontaine Bouillon<br>
+                    5950, Raismes<br>
+                    06 86 16 66 55<br>
+                    corentindelot05@gmail.com</p>
+
+                    <p><strong>Objet :</strong> Candidature pour un stage de 12 à 14 semaines en développement logiciel web et mobile</p>
+
+                    <p>Madame, Monsieur,</p>
+
+                    <p>Actuellement étudiant en Licence Professionnelle de Développement Logiciel Web et Mobile à l'Université Polytechnique Hauts-de-France (UPHF), je suis à la recherche d'un stage de 12 à 14 semaines à partir du 17 mars 2025, dans le cadre de ma formation. Passionné par le développement logiciel et désireux de mettre en pratique les compétences acquises au cours de mes études, je souhaiterais vous proposer ma candidature pour rejoindre votre équipe en tant que stagiaire.</p>
+
+                    <p>Avant de poursuivre ma licence, j'ai obtenu un BTS Services Informatiques aux Organisations (SIO), qui m'a permis de découvrir différentes facettes du développement informatique. Lors de mon stage chez CGI, j'ai eu l'opportunité de travailler en tant que développeur Java, en développant des écrans d'administration à l'aide du framework <strong>Spring</strong>. Cette expérience m'a également permis de suivre des formations sur des technologies telles que <strong>HTML/CSS</strong>, <strong>PHP</strong>, <strong>MySQL</strong>, <strong>Flutter</strong> et <strong>Vue.js</strong>.</p>
+
+                    <p>Mes compétences en développement logiciel et mes qualités personnelles telles que l’autonomie, la ponctualité, l’adaptabilité et l'esprit d'équipe me permettront de m’intégrer rapidement dans votre équipe et de contribuer efficacement aux projets en cours.</p>
+
+                    <p>Je vous remercie pour l'attention que vous porterez à ma candidature. Je me tiens à votre disposition pour toute information complémentaire et j'espère pouvoir vous rencontrer afin de vous présenter de manière plus détaillée mes motivations et mes compétences.</p>
+
+                    <p>Veuillez agréer, Madame, Monsieur, l’expression de mes salutations distinguées.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
